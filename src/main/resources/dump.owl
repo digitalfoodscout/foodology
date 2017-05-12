@@ -1,0 +1,1292 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2017/4/dfs_ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/user/ontologies/2017/4/dfs_ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/user/ontologies/2017/4/dfs_ontology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Lebensmittel_für_spezielle_Ernährung"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Graubrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kleingebäck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alkoholische_Getränke"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Feinbrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vollkornbrötchen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Schwarzbrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fertiggerichte_auf_Brotbasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Knäckebrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Broterzeugnis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Menükomponenten_vorwiegend_pflanzlich"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mischbrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Menükomponenten_vorwiegend_tierisch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rezeptzutaten"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fleisch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lebensmittel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spezialbrote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kartoffeln,_Pilze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vollkorn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spezialbrötchen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brötchen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Andere_und_ohne_Angaben"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spezialbrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Milch,_Milchprodukte,_Käse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Viel_Histamin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gemüse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#histamin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weißbrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wurstwaren,_Fleischwaren"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegetarische_Lebensmittel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wild,_Geflügel,_Federwild,_Innereien"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Früchte,_Obst"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Öle,_Fette,_Butter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hülsenfrüchte,_Schalenobst,_Öl-_und_andere_Samen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nichtalkoholische_Getränke,_Kaffee,_Tee_und_Wasser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Süßwaren,_Zucker,_Schokolade,_Eis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cerealien,_Getreide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vollkornbrot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eier_und_Teigwaren"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dauer_und_Feinbackwaren"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fisch_und_Fischerzeugnisse,_Krebs-_und_Muscheltiere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vollkorn-Kleingebäck"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5562"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5564"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5563"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5442"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5401"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5324"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5326"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5325"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5639"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5083"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5474"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5352"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5473"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5674"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5351"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5472"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5471"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5515"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5636"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5514"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot4988"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5638"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5637"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5513"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5706"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5705"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5707"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5193"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5386"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5385"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5387"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5505"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5785"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5105"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5977"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vollkornbrot5976"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Brötchen"/>
+        <Class IRI="#Kleingebäck"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Feinbrot"/>
+        <Class IRI="#Weißbrot"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Graubrot"/>
+        <Class IRI="#Mischbrot"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Graubrot"/>
+        <Class IRI="#Schwarzbrot"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Mischbrot"/>
+        <Class IRI="#Schwarzbrot"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Spezialbrot"/>
+        <Class IRI="#Spezialbrote"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Spezialbrot"/>
+        <Class IRI="#Spezialbrötchen"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Spezialbrote"/>
+        <Class IRI="#Spezialbrötchen"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Viel_Histamin"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#histamin"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">151.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vollkorn"/>
+        <Class IRI="#Vollkorn-Kleingebäck"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vollkorn"/>
+        <Class IRI="#Vollkornbrötchen"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vollkorn-Kleingebäck"/>
+        <Class IRI="#Vollkornbrötchen"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Alkoholische_Getränke"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Andere_und_ohne_Angaben"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Brot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Brot"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Broterzeugnis"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Brötchen"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dauer_und_Feinbackwaren"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eier_und_Teigwaren"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Feinbrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fertiggerichte_auf_Brotbasis"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fleisch"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gemüse"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Graubrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kleingebäck"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knäckebrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lebensmittel_für_spezielle_Ernährung"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Menükomponenten_vorwiegend_pflanzlich"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Menükomponenten_vorwiegend_tierisch"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mischbrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rezeptzutaten"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Schwarzbrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spezialbrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spezialbrote"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spezialbrötchen"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegetarische_Lebensmittel"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Viel_Histamin"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vollkorn"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vollkorn-Kleingebäck"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vollkornbrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vollkornbrötchen"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weißbrot"/>
+        <Class IRI="#Brot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cerealien,_Getreide"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fisch_und_Fischerzeugnisse,_Krebs-_und_Muscheltiere"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Früchte,_Obst"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hülsenfrüchte,_Schalenobst,_Öl-_und_andere_Samen"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kartoffeln,_Pilze"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Milch,_Milchprodukte,_Käse"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nichtalkoholische_Getränke,_Kaffee,_Tee_und_Wasser"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Süßwaren,_Zucker,_Schokolade,_Eis"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wild,_Geflügel,_Federwild,_Innereien"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wurstwaren,_Fleischwaren"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Öle,_Fette,_Butter"/>
+        <Class IRI="#Lebensmittel"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot4988"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot4988"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot4988"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5083"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5083"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5083"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5105"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5105"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5105"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5193"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5193"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5193"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5324"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5324"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5324"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5325"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5325"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5325"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5326"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5326"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5326"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5351"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5351"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5351"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5352"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5352"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5352"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5385"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5385"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5385"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5386"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5386"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5386"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5387"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5387"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5387"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5401"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5401"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5401"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5442"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5442"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5442"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5471"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5471"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5471"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5472"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5472"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5472"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5473"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5473"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5473"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5474"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5474"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5474"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5505"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5505"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5505"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5513"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5513"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5513"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5514"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5514"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5514"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5515"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5515"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5515"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5562"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5562"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5562"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5563"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5563"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5563"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5564"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5564"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5564"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5636"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5636"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5636"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5637"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5637"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5637"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5638"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5638"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5638"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5639"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5639"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5639"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5674"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5674"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5674"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5705"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5705"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5705"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5706"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5706"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5706"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5707"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5707"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5707"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5785"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5785"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5785"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5976"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5976"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5976"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brot"/>
+        <NamedIndividual IRI="#Vollkornbrot5977"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lebensmittel"/>
+        <NamedIndividual IRI="#Vollkornbrot5977"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vollkornbrot"/>
+        <NamedIndividual IRI="#Vollkornbrot5977"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot4988"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">178.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot4988"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Soja</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5083"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">172.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5083"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Weizenkeimen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">171.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Weizen, Roggenvollkornschrottoastbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5193"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">165.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5193"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Milch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5324"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">158.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5324"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Kleie</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5325"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">158.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5325"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Ã–lsamen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5326"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">158.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5326"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Sonnenblumenkernen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5351"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">157.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5351"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Leinsamen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5352"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">157.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5352"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Mohn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5385"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">155.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5385"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit KÃ¼mmel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5386"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">155.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5386"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Sesam</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5387"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">155.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5387"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Hafervollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5401"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">154.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5401"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Mandeln</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5442"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">151.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5442"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit MilcheiweiÃŸ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5471"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">150.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5471"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Sauermilch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5472"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">150.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5472"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Buttermilch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5473"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">150.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5473"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Joghurt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5474"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">150.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5474"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Kefir</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5505"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">149.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5505"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Weizenvollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5513"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">148.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5513"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Weizenvollkornmischschrotbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5514"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">148.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5514"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Weizen, Roggenvollkornschrotbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5515"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">148.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5515"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Mehrkornvollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5562"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">146.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5562"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Gerstenvollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5563"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">146.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5563"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Roggenvollkornmischschrotbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5564"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">146.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5564"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Roggen, Weizenvollkornschrotbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5636"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">142.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5636"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5637"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">142.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5637"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Roggenvollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5638"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">142.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5638"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Weizenvollkornmischbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5639"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">142.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5639"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Weizen, Roggenvollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5674"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">141.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5674"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit GewÃ¼rzen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5705"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">139.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5705"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Malz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5706"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">139.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5706"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Roggenvollkornmischbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5707"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">139.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5707"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Roggen, Weizenvollkornbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5785"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">135.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5785"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot mit Rosinen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5976"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">125.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5976"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Vollkornschrotbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#histamin"/>
+        <NamedIndividual IRI="#Vollkornbrot5977"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">125.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Vollkornbrot5977"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vollkornbrot-Roggenvollkornschrotbrot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyDomain>
+        <DataProperty IRI="#histamin"/>
+        <Class IRI="#Vollkornbrot"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Vollkornbrot"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#histamin"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
