@@ -6,6 +6,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import uk.ac.manchester.cs.jfact.JFactFactory;
 
 import java.io.File;
+import java.util.stream.Stream;
 
 public class Owlapitest {
     private static final String prefix = "http://www.semanticweb.org/user/ontologies/2017/4/dfs_ontology";
@@ -29,25 +30,32 @@ public class Owlapitest {
         OWLReasoner reasoner = new JFactFactory().createReasoner(ontology);
 
         // check if ontology is consistent
-        if(!reasoner.isConsistent()) {
+        if (!reasoner.isConsistent()) {
             throw new RuntimeException("Ontology is not consistent!");
         }
 
-        // Get specific individual
-        OWLNamedIndividual individual =  dataFactory.getOWLNamedIndividual(IRI.create(prefix + "#Vollkornbrot5401"));
+        // Get individual by id
+        OWLDataProperty property = dataFactory.getOWLDataProperty(prefix + "#id");
+        OWLClassExpression expression = dataFactory.getOWLDataHasValue(property, dataFactory.getOWLLiteral(5401));
+        Stream<OWLNamedIndividual> individuals = reasoner.getInstances(expression, false).entities();
 
-        // Get types of individual
-        NodeSet<OWLClass> individualTypes = reasoner.getTypes(individual, false);
 
-        // Print types of individual
-        for(Node node : individualTypes) {
-            System.out.println(node.toString());
-        }
+        // Handle all returned individuals (should only be one!)
+        individuals.forEach(owlNamedIndividual -> {
+                    // Get types of individual
+                    NodeSet<OWLClass> individualTypes = reasoner.getTypes(owlNamedIndividual, false);
 
-        // get "Viel_Histamin" owl class
-        OWLClass vielHistamin = dataFactory.getOWLClass(prefix + "#Viel_Histamin");
+                    // Print types of individual
+                    for (Node node : individualTypes) {
+                        System.out.println(node.toString());
+                    }
 
-        // Print if product has "Viel Histamin"
-        System.out.println(individualTypes.containsEntity(vielHistamin));
+                    // get "Viel_Histamin" owl class
+                    OWLClass vielHistamin = dataFactory.getOWLClass(prefix + "#Viel_Histamin");
+
+                    // Print if product has "Viel Histamin"
+                    System.out.println(individualTypes.containsEntity(vielHistamin));
+                }
+        );
     }
 }
