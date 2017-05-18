@@ -3066,6 +3066,21 @@
         <Class IRI="#Vollkornteigwarenarten"/>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Wenig_Lactose"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#lactose"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:double"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">100.0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">500.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Wildpilz"/>
         <Class IRI="#Wildpilze"/>
     </EquivalentClasses>
