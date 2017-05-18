@@ -11,9 +11,6 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
-run {
-    systemProperty "java.library.path", "./libs/FaCtppNative"
-}
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
