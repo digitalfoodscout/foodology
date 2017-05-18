@@ -1,27 +1,27 @@
-import com.etsy.net.UnixDomainSocket;
 import org.semanticweb.owlapi.model.OWLClass;
-import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.reasoner.Node;
 import org.semanticweb.owlapi.reasoner.NodeSet;
 
 import java.io.*;
+import java.net.Socket;
 
 public class OWLClientHandler extends Thread {
 
-    private UnixDomainSocket socket;
+    private Socket socket;
     private OWLScout scout;
 
-    public OWLClientHandler(OWLScout scout, UnixDomainSocket socket) {
+    public OWLClientHandler(OWLScout scout, Socket socket) {
         this.scout = scout;
         this.socket = socket;
     }
 
     @Override
     public void run() {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-        try (PrintStream printStream = new PrintStream(socket.getOutputStream())) {
+        try (
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                PrintStream printStream = new PrintStream(socket.getOutputStream())
+        ) {
             String command = bufferedReader.readLine();
 
             switch (command) {
@@ -29,7 +29,7 @@ public class OWLClientHandler extends Thread {
                     String individualID = bufferedReader.readLine();
                     OWLNamedIndividual individual = scout.getIndividualByID(individualID);
 
-                    if(individual ==  null) {
+                    if (individual == null) {
                         printStream.print("Individual not found");
                         break;
                     }

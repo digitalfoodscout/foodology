@@ -1,9 +1,10 @@
 "use strict";
 const net = require('net');
 
-const path = 'owl.socket';
-
-const socket = net.connect(path, () => {
+const socket = net.connect({
+    port: 23487,
+    host: 'localhost'
+}, () => {
     console.log("Connection established!");
 
     socket.write("getIndividualTypes\nM300400\n");
