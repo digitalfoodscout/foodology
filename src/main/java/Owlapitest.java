@@ -1,61 +1,46 @@
-import org.semanticweb.owlapi.apibinding.OWLManager;
+import com.etsy.net.JUDS;
+import com.etsy.net.UnixDomainSocket;
+import com.etsy.net.UnixDomainSocketServer;
 import org.semanticweb.owlapi.model.*;
-import org.semanticweb.owlapi.reasoner.Node;
-import org.semanticweb.owlapi.reasoner.NodeSet;
-import org.semanticweb.owlapi.reasoner.OWLReasoner;
-import uk.ac.manchester.cs.jfact.JFactFactory;
-
 import java.io.File;
-import java.util.stream.Stream;
+import java.io.IOException;
 
 public class Owlapitest {
-    private static final String prefix = "http://www.semanticweb.org/user/ontologies/2017/4/dfs_ontology";
-
     public static void main(String args[]) {
-        // initialize OWLAPI
-        OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-        OWLDataFactory dataFactory = manager.getOWLDataFactory();
+        OWLScout owlScout;
+        String socketPath = "owl.socket";
 
-        OWLOntology ontology = null;
-
-        // load ontology from file (mapped by ontop)
         try {
-            ontology = manager.loadOntologyFromOntologyDocument(new File("src/main/resources/dump.owl"));
+            owlScout = new OWLScout();
         } catch (OWLOntologyCreationException e) {
             e.printStackTrace();
-            System.exit(3);
+            return;
         }
 
-        // Create reasoner
-        OWLReasoner reasoner = new JFactFactory().createReasoner(ontology);
+        // Delete existing socket (if present)
+        //noinspection ResultOfMethodCallIgnored
+        new File(socketPath).delete();
 
-        // check if ontology is consistent
-        if (!reasoner.isConsistent()) {
-            throw new RuntimeException("Ontology is not consistent!");
+        UnixDomainSocketServer domainSocketServer = null;
+
+        try {
+            // Create server
+            domainSocketServer = new UnixDomainSocketServer(socketPath, JUDS.SOCK_STREAM, 5);
+
+            // Wait for clients
+            //noinspection InfiniteLoopStatement
+            while (true) {
+                UnixDomainSocket socket = domainSocketServer.accept();
+
+                OWLClientHandler clientHandler = new OWLClientHandler(owlScout, socket);
+                clientHandler.start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-        // Get individual by id
-        OWLDataProperty property = dataFactory.getOWLDataProperty(prefix + "#id");
-        OWLClassExpression expression = dataFactory.getOWLDataHasValue(property, dataFactory.getOWLLiteral(5401));
-        Stream<OWLNamedIndividual> individuals = reasoner.getInstances(expression, false).entities();
-
-
-        // Handle all returned individuals (should only be one!)
-        individuals.forEach(owlNamedIndividual -> {
-                    // Get types of individual
-                    NodeSet<OWLClass> individualTypes = reasoner.getTypes(owlNamedIndividual, false);
-
-                    // Print types of individual
-                    for (Node node : individualTypes) {
-                        System.out.println(node.toString());
-                    }
-
-                    // get "Viel_Histamin" owl class
-                    OWLClass vielHistamin = dataFactory.getOWLClass(prefix + "#Viel_Histamin");
-
-                    // Print if product has "Viel Histamin"
-                    System.out.println(individualTypes.containsEntity(vielHistamin));
-                }
-        );
+        finally {
+            if(domainSocketServer != null)
+                domainSocketServer.close();
+        }
     }
 }
