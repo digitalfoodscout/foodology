@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.reasoner.Node;
@@ -25,24 +26,12 @@ public class OWLClientHandler extends Thread {
             String command = bufferedReader.readLine();
 
             switch (command) {
-                case "getIndividualTypes":
-                    String individualID = bufferedReader.readLine();
-                    OWLNamedIndividual individual = scout.getIndividualByID(individualID);
+                case "getOccuresBy":
+                    String symptom = bufferedReader.readLine();
+                    OccuresByResult intolerances = scout.getOccuresBy(symptom);
 
-                    if (individual == null) {
-                        printStream.print("Individual not found");
-                        break;
-                    }
-
-                    // Get types of individual
-                    NodeSet<OWLClass> individualTypes = scout.getReasoner().getTypes(individual, false);
-
-                    // Print types of individual
-                    for (Node node : individualTypes) {
-                        OWLClass repClass = (OWLClass) node.getRepresentativeElement();
-
-                        printStream.println(repClass.getIRI().getShortForm());
-                    }
+                    Gson gson = new Gson();
+                    printStream.print(gson.toJson(intolerances));
 
                     break;
                 default:

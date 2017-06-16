@@ -18,4 +18,5 @@ dependencies {
     compile "net.sourceforge.owlapi:owlapi-distribution:5.1.0"
     //compile "net.sourceforge.owlapi:jfact:5.0.1" // Not working correct with data expressions
     compile 'net.sourceforge.owlapi:org.semanticweb.hermit:1.3.8.510'
+    compile 'com.google.code.gson:gson:2.8.1'
 }
