@@ -7,7 +7,7 @@ const socket = net.connect({
 }, () => {
     console.log("Connection established!");
 
-    socket.write("getIndividualTypes\nM300400\n");
+    socket.write("getOccuresBy\nBauchschmerzen\n");
 });
 
 let answer = "";

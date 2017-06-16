@@ -1,15 +1,15 @@
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
-//import uk.ac.manchester.cs.jfact.JFactFactory;
 
 import java.io.File;
-import java.util.Optional;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class OWLScout {
-    private static final String prefix = "http://www.semanticweb.org/user/ontologies/2017/4/dfs_ontology#";
+    private static final String prefix = "http://digitalfoodscout.me/symptom#";
 
     private OWLReasoner reasoner;
     private OWLOntology ontology;
@@ -22,7 +22,7 @@ public class OWLScout {
         dataFactory = manager.getOWLDataFactory();
 
         // load ontology from file (mapped by ontop)
-        ontology = manager.loadOntologyFromOntologyDocument(new File("src/main/resources/food.owl"));
+        ontology = manager.loadOntologyFromOntologyDocument(new File("src/main/resources/symptom.owl"));
 
         // Create reasoner
         //reasoner = new JFactFactory().createReasoner(ontology);
@@ -34,40 +34,27 @@ public class OWLScout {
         }
     }
 
-    public OWLNamedIndividual getIndividualByID(String key) {
-        // Get individual by id
-        OWLDataProperty property = dataFactory.getOWLDataProperty(prefix + "key");
-        OWLClassExpression expression = dataFactory.getOWLDataHasValue(property, dataFactory.getOWLLiteral(key));
-        Stream<OWLNamedIndividual> individuals = reasoner.getInstances(expression, false).entities();
+    public OccuresByResult getOccuresBy(String symptom) {
+        OWLNamedIndividual herzrasen = dataFactory.getOWLNamedIndividual(prefix + symptom);
 
-        Optional<OWLNamedIndividual> optionalIndividual = individuals.findFirst();
+        OWLObjectProperty occuresOftenBy = dataFactory.getOWLObjectProperty(prefix + "Tritt_Häufig_Auf_Bei");
+        OWLObjectProperty occuresSeldomBy = dataFactory.getOWLObjectProperty(prefix + "Tritt_Selten_Auf_Bei");
 
-        return optionalIndividual.orElse(null);
+        NodeSet<OWLNamedIndividual> intolerancesOftenNodes = reasoner.getObjectPropertyValues(herzrasen, occuresOftenBy);
+        NodeSet<OWLNamedIndividual> intolerancesSeldomNodes = reasoner.getObjectPropertyValues(herzrasen, occuresSeldomBy);
+
+        List<String> intolerancesOften = new ArrayList<>();
+
+        intolerancesOftenNodes.forEach(propertyValue -> {
+            intolerancesOften.add(propertyValue.getRepresentativeElement().getIRI().getShortForm());
+        });
+
+        List<String> intolerancesSeldom = new ArrayList<>();
+
+        intolerancesSeldomNodes.forEach(propertyValue -> {
+            intolerancesSeldom.add(propertyValue.getRepresentativeElement().getIRI().getShortForm());
+        });
+
+        return new OccuresByResult(intolerancesOften.toArray(new String[intolerancesOften.size()]), intolerancesSeldom.toArray(new String[intolerancesSeldom.size()]));
     }
-
-    public static String getPrefix() {
-        return prefix;
-    }
-
-    public OWLReasoner getReasoner() {
-        return reasoner;
-    }
-
-    public OWLOntology getOntology() {
-        return ontology;
-    }
-
-    public OWLDataFactory getDataFactory() {
-        return dataFactory;
-    }
-
-    public OWLOntologyManager getManager() {
-        return manager;
-    }
-
-    // get "Viel_Histamin" owl class
-    //OWLClass vielHistamin = owlScout.getDataFactory().getOWLClass(owlScout.getPrefix() + "#Viel_Histamin");
-
-    // Print if product has "Viel Histamin"
-    //System.out.println(individualTypes.containsEntity(vielHistamin));
 }
