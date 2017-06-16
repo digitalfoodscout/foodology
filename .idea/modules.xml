@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Owlapitest.iml" filepath="$PROJECT_DIR$/.idea/modules/Owlapitest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Owlapitest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Owlapitest_main.iml" group="Owlapitest" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Owlapitest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Owlapitest_test.iml" group="Owlapitest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foodology.iml" filepath="$PROJECT_DIR$/.idea/modules/foodology.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foodology_main.iml" filepath="$PROJECT_DIR$/.idea/modules/foodology_main.iml" group="foodology" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foodology_test.iml" filepath="$PROJECT_DIR$/.idea/modules/foodology_test.iml" group="foodology" />
     </modules>
   </component>
 </project>
