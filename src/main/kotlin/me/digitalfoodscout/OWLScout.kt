@@ -11,14 +11,17 @@ import java.util.ArrayList
 class OWLScout @Throws(OWLOntologyCreationException::class)
 constructor() {
 
+    data class OccuresByResult(val often: Array<String>, val seldom: Array<String>)
+    class OntologyNotConsistentException : RuntimeException()
+
     private val reasoner: OWLReasoner
     private val ontology: OWLOntology
     private val dataFactory: OWLDataFactory
-    private val manager: OWLOntologyManager
+    private val manager: OWLOntologyManager = OWLManager.createOWLOntologyManager()
+    private val prefix = "http://digitalfoodscout.me/symptom#"
 
     init {
         // initialize OWLAPI
-        manager = OWLManager.createOWLOntologyManager()
         dataFactory = manager.owlDataFactory
 
         // load ontology from file (mapped by ontop)
@@ -34,29 +37,21 @@ constructor() {
         }
     }
 
-    data class OccuresByResult(val often: Array<String>, val seldom: Array<String>)
-
-    fun getOccuresBy(symptom: String): OccuresByResult {
-        val herzrasen = dataFactory.getOWLNamedIndividual(prefix + symptom)
+    fun getOccuresBy(symptomName: String): OccuresByResult {
+        val symptom = dataFactory.getOWLNamedIndividual(prefix + symptomName)
 
         val occuresOftenBy = dataFactory.getOWLObjectProperty(prefix + "Tritt_Häufig_Auf_Bei")
         val occuresSeldomBy = dataFactory.getOWLObjectProperty(prefix + "Tritt_Selten_Auf_Bei")
 
-        val intolerancesOftenNodes = reasoner.getObjectPropertyValues(herzrasen, occuresOftenBy)
-        val intolerancesSeldomNodes = reasoner.getObjectPropertyValues(herzrasen, occuresSeldomBy)
+        val intolerancesOftenNodes = reasoner.getObjectPropertyValues(symptom, occuresOftenBy)
+        val intolerancesSeldomNodes = reasoner.getObjectPropertyValues(symptom, occuresSeldomBy)
 
         val intolerancesOften = ArrayList<String>()
-
-        intolerancesOftenNodes.forEach { propertyValue -> intolerancesOften.add(propertyValue.representativeElement.iri.shortForm) }
-
         val intolerancesSeldom = ArrayList<String>()
 
+        intolerancesOftenNodes.forEach { propertyValue -> intolerancesOften.add(propertyValue.representativeElement.iri.shortForm) }
         intolerancesSeldomNodes.forEach { propertyValue -> intolerancesSeldom.add(propertyValue.representativeElement.iri.shortForm) }
 
         return OccuresByResult(intolerancesOften.toTypedArray(), intolerancesSeldom.toTypedArray())
-    }
-
-    companion object {
-        private val prefix = "http://digitalfoodscout.me/symptom#"
     }
 }
