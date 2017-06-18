@@ -11,15 +11,13 @@ fun main(args: Array<String>) {
     try {
         owlScout = OWLScout()
 
-        get("/occuresBy/:symptom", { request, _ ->
+        get("/occursWith/:symptom", { request, _ ->
             val symptom = request.params(":symptom")
-
-            val intolerances = owlScout.getOccuresBy(symptom)
+            val intolerances = owlScout.getOccursWith(symptom)
 
             intolerances
         }, gson::toJson )
     } catch (e: OWLOntologyCreationException) {
         e.printStackTrace()
-        return
     }
 }

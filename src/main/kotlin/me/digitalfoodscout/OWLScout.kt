@@ -11,7 +11,7 @@ import java.util.ArrayList
 class OWLScout @Throws(OWLOntologyCreationException::class)
 constructor() {
 
-    data class OccuresByResult(val often: Array<String>, val seldom: Array<String>)
+    data class OccursWithResult(val often: Array<String>, val seldom: Array<String>)
     class OntologyNotConsistentException : RuntimeException()
 
     private val reasoner: OWLReasoner
@@ -37,14 +37,14 @@ constructor() {
         }
     }
 
-    fun getOccuresBy(symptomName: String): OccuresByResult {
+    fun getOccursWith(symptomName: String): OccursWithResult {
         val symptom = dataFactory.getOWLNamedIndividual(prefix + symptomName)
 
-        val occuresOftenBy = dataFactory.getOWLObjectProperty(prefix + "Tritt_Häufig_Auf_Bei")
-        val occuresSeldomBy = dataFactory.getOWLObjectProperty(prefix + "Tritt_Selten_Auf_Bei")
+        val occursOftenWith = dataFactory.getOWLObjectProperty(prefix + "Tritt_Häufig_Auf_Bei")
+        val occursSeldomWith = dataFactory.getOWLObjectProperty(prefix + "Tritt_Selten_Auf_Bei")
 
-        val intolerancesOftenNodes = reasoner.getObjectPropertyValues(symptom, occuresOftenBy)
-        val intolerancesSeldomNodes = reasoner.getObjectPropertyValues(symptom, occuresSeldomBy)
+        val intolerancesOftenNodes = reasoner.getObjectPropertyValues(symptom, occursOftenWith)
+        val intolerancesSeldomNodes = reasoner.getObjectPropertyValues(symptom, occursSeldomWith)
 
         val intolerancesOften = ArrayList<String>()
         val intolerancesSeldom = ArrayList<String>()
@@ -52,6 +52,6 @@ constructor() {
         intolerancesOftenNodes.forEach { propertyValue -> intolerancesOften.add(propertyValue.representativeElement.iri.shortForm) }
         intolerancesSeldomNodes.forEach { propertyValue -> intolerancesSeldom.add(propertyValue.representativeElement.iri.shortForm) }
 
-        return OccuresByResult(intolerancesOften.toTypedArray(), intolerancesSeldom.toTypedArray())
+        return OccursWithResult(intolerancesOften.toTypedArray(), intolerancesSeldom.toTypedArray())
     }
 }
