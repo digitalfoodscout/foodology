@@ -21,40 +21,61 @@
     
 
 
-    <!-- http://digitalfoodscout.me/symptom#Tritt_Auf_Bei -->
+    <!-- http://digitalfoodscout.me/symptom#occurs_with -->
 
-    <owl:ObjectProperty rdf:about="http://digitalfoodscout.me/symptom#Tritt_Auf_Bei">
+    <owl:ObjectProperty rdf:about="http://digitalfoodscout.me/symptom#occurs_with">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://digitalfoodscout.me/symptom#Verursacht"/>
         <rdfs:domain rdf:resource="http://digitalfoodscout.me/symptom#Symptom"/>
+        <rdfs:range rdf:resource="http://digitalfoodscout.me/symptom#OccursWith_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#occurs_with_commonness -->
+
+    <owl:ObjectProperty rdf:about="http://digitalfoodscout.me/symptom#occurs_with_commonness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://digitalfoodscout.me/symptom#OccursWith_Relation"/>
+        <rdfs:range rdf:resource="http://digitalfoodscout.me/symptom#Commonness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#occurs_with_intolerance -->
+
+    <owl:ObjectProperty rdf:about="http://digitalfoodscout.me/symptom#occurs_with_intolerance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://digitalfoodscout.me/symptom#OccursWith_Relation"/>
         <rdfs:range rdf:resource="http://digitalfoodscout.me/symptom#Intoleranz"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://digitalfoodscout.me/symptom#Tritt_Häufig_Auf_Bei -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:ObjectProperty rdf:about="http://digitalfoodscout.me/symptom#Tritt_Häufig_Auf_Bei">
-        <rdfs:subPropertyOf rdf:resource="http://digitalfoodscout.me/symptom#Tritt_Auf_Bei"/>
-    </owl:ObjectProperty>
     
 
 
-    <!-- http://digitalfoodscout.me/symptom#Tritt_Selten_Auf_Bei -->
+    <!-- http://digitalfoodscout.me/symptom#min_appearance_after -->
 
-    <owl:ObjectProperty rdf:about="http://digitalfoodscout.me/symptom#Tritt_Selten_Auf_Bei">
-        <rdfs:subPropertyOf rdf:resource="http://digitalfoodscout.me/symptom#Tritt_Auf_Bei"/>
-    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://digitalfoodscout.me/symptom#min_appearance_after">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://digitalfoodscout.me/symptom#Verursacht -->
+    <!-- http://digitalfoodscout.me/symptom#min_appearance_until -->
 
-    <owl:ObjectProperty rdf:about="http://digitalfoodscout.me/symptom#Verursacht">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://digitalfoodscout.me/symptom#Intoleranz"/>
-        <rdfs:range rdf:resource="http://digitalfoodscout.me/symptom#Symptom"/>
-    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://digitalfoodscout.me/symptom#min_appearance_until">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -81,6 +102,27 @@
 
     <owl:Class rdf:about="http://digitalfoodscout.me/symptom#Blähbauch">
         <rdfs:subClassOf rdf:resource="http://digitalfoodscout.me/symptom#Verdauung"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://digitalfoodscout.me/symptom#occurs_with"/>
+                <owl:hasValue rdf:resource="http://digitalfoodscout.me/symptom#Bauchschmerzen_Lactose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#Commonness -->
+
+    <owl:Class rdf:about="http://digitalfoodscout.me/symptom#Commonness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://digitalfoodscout.me/symptom#Often"/>
+                    <rdf:Description rdf:about="http://digitalfoodscout.me/symptom#Seldom"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -121,6 +163,32 @@
     <owl:Class rdf:about="http://digitalfoodscout.me/symptom#Mental">
         <rdfs:subClassOf rdf:resource="http://digitalfoodscout.me/symptom#Symptom"/>
     </owl:Class>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#OccursWith_Relation -->
+
+    <owl:Class rdf:about="http://digitalfoodscout.me/symptom#OccursWith_Relation">
+        <rdfs:subClassOf rdf:resource="http://digitalfoodscout.me/symptom#Relation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://digitalfoodscout.me/symptom#occurs_with_intolerance"/>
+                <owl:someValuesFrom rdf:resource="http://digitalfoodscout.me/symptom#Intoleranz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://digitalfoodscout.me/symptom#occurs_with_commonness"/>
+                <owl:allValuesFrom rdf:resource="http://digitalfoodscout.me/symptom#Commonness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#Relation -->
+
+    <owl:Class rdf:about="http://digitalfoodscout.me/symptom#Relation"/>
     
 
 
@@ -174,12 +242,6 @@
 
     <owl:Class rdf:about="http://digitalfoodscout.me/symptom#Verdauung">
         <rdfs:subClassOf rdf:resource="http://digitalfoodscout.me/symptom#Symptom"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://digitalfoodscout.me/symptom#Tritt_Häufig_Auf_Bei"/>
-                <owl:hasValue rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -199,7 +261,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Akne">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Haut"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -232,6 +293,18 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Bauchschmerzen">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Bauchbeschwerden"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#Bauchschmerzen_Lactose -->
+
+    <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Bauchschmerzen_Lactose">
+        <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#OccursWith_Relation"/>
+        <occurs_with_commonness rdf:resource="http://digitalfoodscout.me/symptom#Often"/>
+        <occurs_with_intolerance rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
+        <min_appearance_after rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</min_appearance_after>
+        <min_appearance_until rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</min_appearance_until>
     </owl:NamedIndividual>
     
 
@@ -280,7 +353,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Gelenkschmerzen">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Sonstige"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -289,7 +361,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Herzklopfen">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Herz-Kreislauf"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -322,7 +393,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Konzentrationsschwierigkeiten">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Mental"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -331,7 +401,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Kopfschmerzen">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Kopf"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -388,7 +457,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Muskelschmerzen">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Sonstige"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -397,7 +465,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Müdigkeit">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Schlaf"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -407,6 +474,12 @@
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Niesanfälle">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Sonstiges"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#Often -->
+
+    <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Often"/>
     
 
 
@@ -454,7 +527,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Schlafstörungen">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Schlaf"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -479,7 +551,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Schweißausbrüche">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Herz-Kreislauf"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -488,7 +559,6 @@
 
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Schwindel">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Herz-Kreislauf"/>
-        <Tritt_Selten_Auf_Bei rdf:resource="http://digitalfoodscout.me/symptom#Lactose"/>
     </owl:NamedIndividual>
     
 
@@ -506,6 +576,12 @@
     <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Sehstörungen">
         <rdf:type rdf:resource="http://digitalfoodscout.me/symptom#Sonstiges"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://digitalfoodscout.me/symptom#Seldom -->
+
+    <owl:NamedIndividual rdf:about="http://digitalfoodscout.me/symptom#Seldom"/>
     
 
 

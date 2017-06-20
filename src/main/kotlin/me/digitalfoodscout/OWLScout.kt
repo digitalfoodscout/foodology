@@ -11,7 +11,7 @@ import java.util.ArrayList
 class OWLScout @Throws(OWLOntologyCreationException::class)
 constructor() {
 
-    data class OccursWithResult(val often: Array<String>, val seldom: Array<String>)
+    data class OccursWithRelation(val intolerance: String, val min_appearance_after: Int, val min_appearance_until: Int, val commonness: String)
     class OntologyNotConsistentException : RuntimeException()
 
     private val reasoner: OWLReasoner
@@ -37,21 +37,34 @@ constructor() {
         }
     }
 
-    fun getOccursWith(symptomName: String): OccursWithResult {
+    fun getOccursWith(symptomName: String): Array<OccursWithRelation> {
+        val occursWith = dataFactory.getOWLObjectProperty(prefix + "occurs_with")
+        val occursWithIntolerances = dataFactory.getOWLObjectProperty(prefix + "occurs_with_intolerance")
+        val occursWithCommonness = dataFactory.getOWLObjectProperty(prefix + "occurs_with_commonness")
+        val min_appearance_after = dataFactory.getOWLDataProperty(prefix + "min_appearance_after")
+        val min_appearance_until = dataFactory.getOWLDataProperty(prefix + "min_appearance_until")
+
         val symptom = dataFactory.getOWLNamedIndividual(prefix + symptomName)
 
-        val occursOftenWith = dataFactory.getOWLObjectProperty(prefix + "Tritt_Häufig_Auf_Bei")
-        val occursSeldomWith = dataFactory.getOWLObjectProperty(prefix + "Tritt_Selten_Auf_Bei")
+        val intoleranceRelations = reasoner.getObjectPropertyValues(symptom, occursWith)
 
-        val intolerancesOftenNodes = reasoner.getObjectPropertyValues(symptom, occursOftenWith)
-        val intolerancesSeldomNodes = reasoner.getObjectPropertyValues(symptom, occursSeldomWith)
+        val intolerances = ArrayList<OccursWithRelation>()
 
-        val intolerancesOften = ArrayList<String>()
-        val intolerancesSeldom = ArrayList<String>()
+        intoleranceRelations.forEach { relation ->
+            val repRelation = relation.representativeElement
 
-        intolerancesOftenNodes.forEach { propertyValue -> intolerancesOften.add(propertyValue.representativeElement.iri.shortForm) }
-        intolerancesSeldomNodes.forEach { propertyValue -> intolerancesSeldom.add(propertyValue.representativeElement.iri.shortForm) }
+            val min_appearance_after = reasoner.getDataPropertyValues(repRelation, min_appearance_after).first().parseInteger()
+            val min_appearance_until = reasoner.getDataPropertyValues(repRelation, min_appearance_until).first().parseInteger()
 
-        return OccursWithResult(intolerancesOften.toTypedArray(), intolerancesSeldom.toTypedArray())
+            val intoleranceIRI = reasoner.getObjectPropertyValues(repRelation, occursWithIntolerances).first().representativeElement.iri.shortForm
+            val commonnnessIRI = reasoner.getObjectPropertyValues(repRelation, occursWithCommonness).first().representativeElement.iri.shortForm
+
+
+            val intolerance = OccursWithRelation(intoleranceIRI, min_appearance_after, min_appearance_until, commonnnessIRI)
+
+            intolerances.add(intolerance)
+        }
+
+        return intolerances.toTypedArray()
     }
 }
